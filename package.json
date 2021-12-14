@@ -1,7 +1,7 @@
 {
   "name": "thuynn",
   "version": "0.1.0",
-  "homepage": "https://thuynn.github.io/alo/",
+  "homepage": "/alo",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
