@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/alo/static/css/main.90b2cd1f.chunk.css",
-    "main.js": "/alo/static/js/main.ba876f77.chunk.js",
-    "main.js.map": "/alo/static/js/main.ba876f77.chunk.js.map",
-    "runtime-main.js": "/alo/static/js/runtime-main.f3ce99ec.js",
-    "runtime-main.js.map": "/alo/static/js/runtime-main.f3ce99ec.js.map",
-    "static/js/2.ccbca48b.chunk.js": "/alo/static/js/2.ccbca48b.chunk.js",
-    "static/js/2.ccbca48b.chunk.js.map": "/alo/static/js/2.ccbca48b.chunk.js.map",
-    "static/js/3.4dba52ad.chunk.js": "/alo/static/js/3.4dba52ad.chunk.js",
-    "static/js/3.4dba52ad.chunk.js.map": "/alo/static/js/3.4dba52ad.chunk.js.map",
+    "main.css": "/alo/static/css/main.b2588127.chunk.css",
+    "main.js": "/alo/static/js/main.8a057724.chunk.js",
+    "main.js.map": "/alo/static/js/main.8a057724.chunk.js.map",
+    "runtime-main.js": "/alo/static/js/runtime-main.ac8629b2.js",
+    "runtime-main.js.map": "/alo/static/js/runtime-main.ac8629b2.js.map",
+    "static/css/2.c7977b21.chunk.css": "/alo/static/css/2.c7977b21.chunk.css",
+    "static/js/2.e0e5f70d.chunk.js": "/alo/static/js/2.e0e5f70d.chunk.js",
+    "static/js/2.e0e5f70d.chunk.js.map": "/alo/static/js/2.e0e5f70d.chunk.js.map",
+    "static/js/3.96b22c2d.chunk.js": "/alo/static/js/3.96b22c2d.chunk.js",
+    "static/js/3.96b22c2d.chunk.js.map": "/alo/static/js/3.96b22c2d.chunk.js.map",
     "index.html": "/alo/index.html",
-    "static/css/main.90b2cd1f.chunk.css.map": "/alo/static/css/main.90b2cd1f.chunk.css.map",
-    "static/js/2.ccbca48b.chunk.js.LICENSE.txt": "/alo/static/js/2.ccbca48b.chunk.js.LICENSE.txt",
+    "static/css/2.c7977b21.chunk.css.map": "/alo/static/css/2.c7977b21.chunk.css.map",
+    "static/css/main.b2588127.chunk.css.map": "/alo/static/css/main.b2588127.chunk.css.map",
+    "static/js/2.e0e5f70d.chunk.js.LICENSE.txt": "/alo/static/js/2.e0e5f70d.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/alo/static/media/fontawesome-webfont.f691f37e.woff",
     "static/media/logo.6ce24c58.svg": "/alo/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3ce99ec.js",
-    "static/js/2.ccbca48b.chunk.js",
-    "static/css/main.90b2cd1f.chunk.css",
-    "static/js/main.ba876f77.chunk.js"
+    "static/js/runtime-main.ac8629b2.js",
+    "static/css/2.c7977b21.chunk.css",
+    "static/js/2.e0e5f70d.chunk.js",
+    "static/css/main.b2588127.chunk.css",
+    "static/js/main.8a057724.chunk.js"
   ]
 }

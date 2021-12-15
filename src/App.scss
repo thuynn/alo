@@ -13,7 +13,9 @@ $medium-only: "#{$screen} and (min-width: 640px) and (max-width: 1024px)" !defau
 
 $large-up: "#{$screen} and (min-width: 1440px)" !default;
 $large-only: "#{$screen} and (min-width: 1024px) and (max-width: 1420)px" !default;
-
+*,*:before,*:after {
+  box-sizing: content-box;
+}
 html {
   font-size: 10px;
   height: 100%;
@@ -34,7 +36,9 @@ ul {
   padding: 0;
   list-style: none;
 }
-
+a {
+  color: #5488c7;
+}
 .align-center {
   text-align: center;
 }
@@ -75,14 +79,35 @@ ul {
   padding: 1.5rem;
   gap: 1.5rem;
   max-width: 1920px;
+
   .cv-personal {
     background: #eaeaea;
     padding: 1.5rem;
   }
-}
-
-.abc {
-  background: red;
+  .cv-demo {
+    position: sticky;
+    bottom: -15px;
+    padding: 0 1rem 1.8rem;
+    text-align: center;
+    background: #61dafb;
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .btn-demo {
+      background: none;
+      border: 2px solid darken($color: #61dafb, $amount: 30);
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      + .btn-demo {
+        margin-left: 10px;
+      }
+      &.btn-active {
+        background: darken($color: #61dafb, $amount: 30);
+        color: white;
+      }
+    }
+  }
 }
 
 .cv-list {
@@ -94,7 +119,6 @@ ul {
     a {
       font-weight: normal;
       font-size: 1.3rem;
-      color: #5488c7;
     }
     + .cv-title {
       margin: 0;
@@ -129,6 +153,7 @@ ul {
 .cv-myself {
   .cv-avatar {
     max-width: 40rem;
+    margin: auto;
   } 
   .cv-name {
     margin: auto;
@@ -137,6 +162,52 @@ ul {
   .cv-introduction {
     padding: 20px 0;
     line-height: 1.8rem;
+  }
+}
+
+.cv-contact {
+  .contact-list {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 3rem 0 0;
+      .fa {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      a {
+        color: #676769;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.layout1 {
+  .cv-contact {
+    .contact-list {
+      border-top: 1px solid white;
+      margin-top: 2rem;
+    }
+  }
+}
+.layout2 {
+  .cv-myself {
+    display: flex;
+    align-items: center;
+    .cv-avatar {
+      max-width: 22rem;;
+    }
+  }
+  .cv-list {
+    text-align: center;
+  }
+  .cv-contact {
+    .contact-list {
+      li {
+        margin: 1rem 0 0;
+      }
+    }
   }
 }
 
@@ -153,9 +224,11 @@ ul {
     }
   }
   @media #{$medium-up} {
+  &.layout1 {
     height: 100%;
     grid-template-rows: repeat($rows, 1fr);
     grid-auto-rows: minmax(min-content, max-content);
+  }
     @for $i from 1 through $cols {
       .box-md-#{$i} {
         grid-column: span #{$i};
