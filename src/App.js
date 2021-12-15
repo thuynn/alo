@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
+import React, { useEffect, useState } from "react";
 
 const MySelf = () => {
   return (
@@ -8,12 +9,14 @@ const MySelf = () => {
       <h1 className="cv-name uppercase align-center">Nguyen Ngoc Thuy</h1>
       <div className="cv-title-job uppercase txt-gray align-center">Front End Deverloper</div>
       <div className="cv-introduction txt-gray italic">
-        “I have been working for more than
-        10 years at frontend position. I
-        have been trying my best to study,
-        enhance and develop my skill as
-        well as my knowlege. I expect to
-        work in a professional environment”
+        “I have been working for more than 
+        10 years at frontend position. This 
+        is the reason why I prefer my own
+        framework rather than the public 
+        one. One of my strength is that I 
+        have good mindset in global 
+        solution and flexibility of resolving 
+        problem.”
       </div>
     </div>
   );
@@ -86,12 +89,24 @@ const Experience = () => {
           <li className="cv-title">
             User Interface Web development
           </li>
-          <li>2014 to now</li>
+          <li>2014 to present</li>
+          <li>
+            <strong>Product description:</strong> The Spectos RTPM Real-Time performance 
+            Management™ Suite is a Software as a Service SaaS platform with solutions 
+            and modules for the ongoing monitoring of business-relevant information in 
+            real-time. Spectos Service Quality Solutions are designed for your Customer 
+            Services, Human Resources, Operations and Quality Management
+          </li>
+          <li className="cv-title">
+          Main responsibilities:
+          </li>
           <li className="list-txt">Web Development Standards for all products of company.</li>
           <li className="list-txt">UI & UX, HTML ,CSS for all products.</li>
-          <li className="list-txt">Worked as a member of the Product team to redefine Platform 
-            app by creating a new interaction model.</li>
-          <li className="list-txt">Collaborated with product owner to define structure and solution.</li>
+          <li className="list-txt"> Working as a member of the Product team to re-define Platform 
+            app by creating a new module such as: common component,
+            grid layout, convert pdf, email template, media print ...</li>
+          <li className="list-txt">Collaborate with product owner to define structure and solution, 
+            for example: how to have a dynamic layout, responsive layout...</li>
           <li className="list-txt">Support mobile team using react native, ionic framework to make UI.</li>
         </ul>
         <ul className="cv-list cv-job-detail">
@@ -102,26 +117,60 @@ const Experience = () => {
             Team leader of User Interface Web development
           </li>
           <li>2007 to 2014</li>
+          <li>
+            <strong>Product description:</strong> Develop and maintain an open-source product 
+            whichprovide collaboration and communication solutions for enterprises 
+            Develop and maintain an open-source product whichprovide collaboration 
+            and communication solutions for enterprises
+          </li>
+          <li className="cv-title">Main responsibilities:</li>
           <li className="list-txt">Organize / Follow / Review the workload and the work of
- the team on severals projects.</li>
+            the team on severals projects.</li>
           <li className="list-txt">Develop and Contribute to resolve issues on all eXo Products
- and eXo Projects.</li>
-          <li className="list-txt">Respect the deadlines.</li>
-          <li className="list-txt">Responsible of the quality of the done work.</li>
+            and eXo Projects.</li>
+          <li className="list-txt">Communication with others people such as TLs, PLs, etc.</li>
           <li className="list-txt">Documentation of the done work.</li>
-          <li className="list-txt">Web Development Standards for eXo Products.</li>
           <li className="list-txt">Knowledge sharing and spreading in the team.</li>
+          <li className="list-txt">Web Development Standards for eXo Products.</li>
+          <li className="list-txt">Responsible of the quality of the done work.</li>
+          <li className="list-txt">Respect the deadlines.</li>
         </ul>
       </div>
     </div>
   );
 }
 function App() {
+  const [layout, setLayout] = useState("layout-960");
+  const [mySeltCss3, setMySeltCss3] = useState("l3ayout-960");
+
+  let mySelfCss = "";
+  if (layout == "layout-960") {
+    mySelfCss = "abc";
+  }
+
   return (
-    <div className="cv-page cv-box-grid">
+    <div className={`cv-page cv-box-grid ${layout}`}>
+
       <div className="cv-personal box-sm-12 box-md-5 box-lg-3 box-h-5">
         <div className="cv-box-grid">
           <div className="box-sm-12">
+            
+            <button onClick={() => {
+                setLayout("layout-960");
+            }}>
+                Layout 940 {layout}
+            </button>
+
+            <button onClick={() => {
+                setLayout("box-lg-3 box-log-6");
+            }}>
+                Layout 640
+            </button>
+          </div>
+
+          <div className={"box-sm-12 " + mySelfCss}>
+            {layout}
+            
             <MySelf/>
           </div>
           <div className="box-sm-12">
@@ -132,10 +181,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="cv-education box-sm-12 box-md-7 box-lg-3 box-h-auto">
+      <div className="cv-education box-sm-12 box-md-7 box-h-auto">
         <Education/>
       </div>
-      <div className="box-sm-12 box-md-7 box-lg-3 box-h-1">
+      <div className="box-sm-12 box-md-7 box-h-1">
         <Experience/>
       </div>
     </div>

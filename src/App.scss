@@ -78,10 +78,11 @@ ul {
   .cv-personal {
     background: #eaeaea;
     padding: 1.5rem;
-    position: sticky;
-    top: 0;
-    left: 0;
   }
+}
+
+.abc {
+  background: red;
 }
 
 .cv-list {
@@ -144,9 +145,6 @@ ul {
   $rows: 5;
   display: grid;
   grid-template-columns: repeat($cols, 1fr);
-  grid-template-rows: repeat($rows, 1fr);
-  grid-auto-rows: minmax(min-content, max-content);
-  height: 100%;
   @media #{$small-up} {
     @for $i from 1 through $cols {
       .box-sm-#{$i} {
@@ -155,6 +153,9 @@ ul {
     }
   }
   @media #{$medium-up} {
+    height: 100%;
+    grid-template-rows: repeat($rows, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
     @for $i from 1 through $cols {
       .box-md-#{$i} {
         grid-column: span #{$i};
@@ -174,9 +175,6 @@ ul {
     .box-h-#{$i} {
       grid-row: span #{$i};
     }
-  }
-  .box-h-auto {
-    grid-auto-rows: auto;
   }
 }
 
