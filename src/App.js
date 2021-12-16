@@ -98,7 +98,7 @@ const Experience = () => {
       <div className="cv-box-content">
         <ul className="cv-list cv-job-detail">
           <li className="cv-title uppercase">
-            Spectos Asia - <a href="https://www.spectos.com/en/">www.spectos.com</a>
+            Spectos Asia - <a href="https://www.spectos.com/en/" target="_blank">www.spectos.com</a>
           </li>
           <li className="cv-title">
             User Interface Web development
@@ -120,19 +120,19 @@ const Experience = () => {
             app by creating a new module such as: common component,
             grid layout, convert pdf, email template, media print ...</li>
           <li className="list-txt">Collaborate with product owner to define structure and solution, 
-            for example: how to have a dynamic layout, responsive layout...</li>
+            for example: how to have a dynamic layout, responsive layout ...</li>
           <li className="list-txt">Support mobile team using react native, ionic framework to make UI.</li>
         </ul>
         <ul className="cv-list cv-job-detail">
           <li className="cv-title uppercase">
-            Exo platform - <a href="https://www.exoplatform.com/">www.exoplatform.com/</a>
+            Exo platform - <a href="https://www.exoplatform.com/" target="_blank">www.exoplatform.com/</a>
           </li>
           <li className="cv-title">
             Team leader of User Interface Web development
           </li>
           <li>2007 to 2014</li>
           <li>
-            <strong>Product description:</strong> Develop and maintain an open-source product whichprovide collaboration and communication solutions for enterprises
+            <strong>Product description:</strong> Develop and maintain an open-source product whichprovide collaboration and communication solutions for enterprises.
           </li>
           <li className="cv-title">Main responsibilities:</li>
           <li className="list-txt">Organize / Follow / Review the workload and the work of
