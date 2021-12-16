@@ -103,6 +103,12 @@ a {
       border: 2px solid darken($color: #61dafb, $amount: 30);
       padding: 0.5rem;
       text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 300ms ease-out;
+      &:hover {
+        background-color: darken($color: #61dafb, $amount: 30);
+        color: white;
+      }
       &.btn-active {
         background: darken($color: #61dafb, $amount: 30);
         color: white;
