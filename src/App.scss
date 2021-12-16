@@ -18,17 +18,11 @@ $large-only: "#{$screen} and (min-width: 1024px) and (max-width: 1420)px" !defau
 }
 html {
   font-size: 10px;
-  height: 100%;
 }
 
 body {
   font-size: 1.3rem;
   color: #2d2a2f;
-  height: 100%;
-}
-
-#root {
-  height: 100%;
 }
 
 ul {
@@ -83,25 +77,33 @@ a {
   .cv-personal {
     background: #eaeaea;
     padding: 1.5rem;
+    .cv-list {
+      text-align: center;
+    }
   }
   .cv-demo {
     position: sticky;
-    bottom: -15px;
+    top: -15px;
     padding: 0 1rem 1.8rem;
     text-align: center;
     background: #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
     h4 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
+      width: 100%;
     }
     .btn-demo {
       background: none;
       border: 2px solid darken($color: #61dafb, $amount: 30);
-      padding: 0.5rem 1rem;
+      padding: 0.5rem;
       text-transform: uppercase;
-      + .btn-demo {
-        margin-left: 10px;
-      }
       &.btn-active {
         background: darken($color: #61dafb, $amount: 30);
         color: white;
@@ -152,8 +154,14 @@ a {
 
 .cv-myself {
   .cv-avatar {
-    max-width: 40rem;
+    max-width: 22rem;
+    max-height: 22rem;
+    border-radius: 50%;
     margin: auto;
+    overflow: hidden;
+    img {
+      width: 22rem;
+    }
   } 
   .cv-name {
     margin: auto;
@@ -180,6 +188,13 @@ a {
         text-decoration: none;
       }
     }
+    @media #{$small-only} {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      text-align: center;
+    }
   }
 }
 
@@ -190,20 +205,30 @@ a {
       margin-top: 2rem;
     }
   }
-}
-.layout2 {
-  .cv-myself {
-    display: flex;
-    align-items: center;
-    .cv-avatar {
-      max-width: 22rem;;
+  @media #{$medium-up} {
+    .cv-personal .cv-list {
+      text-align: left;
     }
   }
-  .cv-list {
-    text-align: center;
+}
+.layout2 {
+  .cv-demo {
+    top: 1.5rem;
   }
+  @media #{$medium-up} {
+    .cv-myself {
+      display: flex;
+      align-items: center;
+      
+    }
+  }
+  
   .cv-contact {
     .contact-list {
+      @media #{$small-only} {
+        border-top: 1px solid white;
+        margin-top: 2rem;
+      }
       li {
         margin: 1rem 0 0;
       }
@@ -213,9 +238,10 @@ a {
 
 .cv-box-grid {
   $cols: 12;
-  $rows: 5;
+  $rows: 10;
   display: grid;
   grid-template-columns: repeat($cols, 1fr);
+ 
   @media #{$small-up} {
     @for $i from 1 through $cols {
       .box-sm-#{$i} {
@@ -224,11 +250,6 @@ a {
     }
   }
   @media #{$medium-up} {
-  &.layout1 {
-    height: 100%;
-    grid-template-rows: repeat($rows, 1fr);
-    grid-auto-rows: minmax(min-content, max-content);
-  }
     @for $i from 1 through $cols {
       .box-md-#{$i} {
         grid-column: span #{$i};

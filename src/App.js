@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import logo from './logo.svg';
+import logo from './avatar.png';
 import './App.scss';
 import 'font-awesome/css/font-awesome.min.css';
 
 const MySelf = () => {
   return (
     <div className="cv-myself">
-      <img src={logo} className="cv-avatar" alt="avatar" />
+      <div className="cv-avatar">
+        <img src={logo}  alt="avatar" />
+      </div>
       <div className="">
         <h1 className="cv-name uppercase align-center">Nguyen Ngoc Thuy</h1>
         <div className="cv-title-job uppercase txt-gray align-center">Front End Deverloper</div>
@@ -162,29 +164,46 @@ function App() {
   let cvContact = "";
   let cvEducation = "";
   let cvExperience = "";
+  let cvDemo = "";
+  let cvEmpty = "";
 
   if (layout === "layout1") {
     cvPersonal = "box-sm-12 box-md-5 box-lg-3 box-h-5";
     cvMySelf = "box-sm-12";
-    cvSkill = "box-sm-12";
-    cvFramework = "box-sm-12";
-    cvContact = "box-sm-12";
+    cvSkill = "box-sm-6 box-md-12";
+    cvFramework = "box-sm-6 box-md-12";
+    cvContact = "box-sm-12 box-md-12";
     cvEducation = "box-sm-12 box-md-7 box-h-auto";
     cvExperience = "box-sm-12 box-md-7";
+    cvDemo = "box-sm-12";
   } else if (layout === "layout2") {
-    cvPersonal = "box-sm-12";
+    cvPersonal = "box-sm-9";
     cvMySelf = "box-sm-12";
-    cvSkill = "box-sm-4";
-    cvFramework = "box-sm-4";
-    cvContact = "box-sm-4";
-    cvEducation = "box-sm-4";
-    cvExperience = "box-sm-8";
+    cvSkill = "box-sm-6 box-md-4";
+    cvFramework = "box-sm-6 box-md-4";
+    cvContact = "box-sm-12 box-md-4";
+    cvEducation = "box-sm-9 box-md-3";
+    cvExperience = "box-sm-9 box-md-6";
+    cvEmpty = "box-sm-3 box-h-2";
+    cvDemo = "box-sm-3";
   }
   
-  console.log("layout ten >>>", layout);
-
   return (
     <div className={`cv-page cv-box-grid ${layout}`}>
+      <div className={"cv-demo " + cvDemo}>
+        <h4>This is a simple demo about Grid Layout. Click on the button to see how it works.</h4>
+        <button className={"btn-demo " + (layout === "layout1" ? "btn-active" : "")} onClick={() => {
+          setLayout("layout1");
+        }}>
+          Layout 1
+        </button>
+
+        <button className={"btn-demo " + (layout === "layout2" ? "btn-active" : "")} onClick={() => {
+            setLayout("layout2");
+        }}>
+          Layout 2
+        </button>
+      </div>
       <div className={"cv-personal " + cvPersonal}>
         <div className="cv-box-grid">
           <div className={cvMySelf}>
@@ -201,25 +220,12 @@ function App() {
           </div>
         </div>
       </div>
+      <div className={"cv-empty " + cvEmpty}></div>
       <div className={"cv-education " + cvEducation}>
         <Education/>
       </div>
       <div className={"cv-experience " + cvExperience}>
         <Experience/>
-      </div>
-      <div className="box-sm-12 cv-demo">
-        <h4>This is a simple demo about Grid Layout. Click on the button to see how it works.</h4>
-        <button className={"btn-demo " + (layout === "layout1" ? "btn-active" : "")} onClick={() => {
-          setLayout("layout1");
-        }}>
-          Layout 1
-        </button>
-
-        <button className={"btn-demo " + (layout === "layout2" ? "btn-active" : "")} onClick={() => {
-            setLayout("layout2");
-        }}>
-          Layout 2
-        </button>
       </div>
     </div>
   );

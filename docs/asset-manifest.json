@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/alo/static/css/main.6242fe6d.chunk.css",
-    "main.js": "/alo/static/js/main.9425d009.chunk.js",
-    "main.js.map": "/alo/static/js/main.9425d009.chunk.js.map",
+    "main.css": "/alo/static/css/main.9345427e.chunk.css",
+    "main.js": "/alo/static/js/main.2f809d60.chunk.js",
+    "main.js.map": "/alo/static/js/main.2f809d60.chunk.js.map",
     "runtime-main.js": "/alo/static/js/runtime-main.ac8629b2.js",
     "runtime-main.js.map": "/alo/static/js/runtime-main.ac8629b2.js.map",
     "static/css/2.c7977b21.chunk.css": "/alo/static/css/2.c7977b21.chunk.css",
@@ -12,16 +12,16 @@
     "static/js/3.96b22c2d.chunk.js.map": "/alo/static/js/3.96b22c2d.chunk.js.map",
     "index.html": "/alo/index.html",
     "static/css/2.c7977b21.chunk.css.map": "/alo/static/css/2.c7977b21.chunk.css.map",
-    "static/css/main.6242fe6d.chunk.css.map": "/alo/static/css/main.6242fe6d.chunk.css.map",
+    "static/css/main.9345427e.chunk.css.map": "/alo/static/css/main.9345427e.chunk.css.map",
     "static/js/2.e0e5f70d.chunk.js.LICENSE.txt": "/alo/static/js/2.e0e5f70d.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.min.css": "/alo/static/media/fontawesome-webfont.f691f37e.woff",
-    "static/media/logo.6ce24c58.svg": "/alo/static/media/logo.6ce24c58.svg"
+    "static/media/avatar.06e45e27.png": "/alo/static/media/avatar.06e45e27.png",
+    "static/media/font-awesome.min.css": "/alo/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.ac8629b2.js",
     "static/css/2.c7977b21.chunk.css",
     "static/js/2.e0e5f70d.chunk.js",
-    "static/css/main.6242fe6d.chunk.css",
-    "static/js/main.9425d009.chunk.js"
+    "static/css/main.9345427e.chunk.css",
+    "static/js/main.2f809d60.chunk.js"
   ]
 }
