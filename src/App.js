@@ -69,7 +69,7 @@ const Contact = () => {
         </li>
         <li>
           <span className="fa fa-phone"></span>
-          <div className="txt-gray">+84 982840613</div>
+          <div className="txt-gray"><a href="tel:+84982840613">+84 982840613</a></div>
         </li>
         <li>
           <span className="fa fa-skype"></span>
