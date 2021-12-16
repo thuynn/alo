@@ -176,7 +176,7 @@ function App() {
     cvExperience = "box-sm-12 box-md-7";
     cvDemo = "box-sm-12";
   } else if (layout === "layout2") {
-    cvPersonal = "box-sm-12 box-md-9";
+    cvPersonal = "box-sm-12 box-md-7";
     cvMySelf = "box-sm-12";
     cvSkill = "box-sm-6 box-md-4";
     cvFramework = "box-sm-6 box-md-4";
