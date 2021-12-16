@@ -47,7 +47,7 @@ const Framework = () => {
   return (
     <div className="cv-box cv-skill">
         <ul className="cv-list">
-          <li className="cv-title uppercase">Framework: </li>
+          <li className="cv-title uppercase">Frameworks: </li>
           <li>Boostrap</li>
           <li>Foudation</li>
           <li>Ionic</li>
