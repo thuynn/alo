@@ -219,7 +219,10 @@ a {
     .cv-myself {
       display: flex;
       align-items: center;
-      
+      gap: 1rem;
+      .cv-avatar + div {
+        flex: 1;
+      }
     }
   }
   
