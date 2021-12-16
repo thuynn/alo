@@ -175,7 +175,7 @@ function App() {
   } else if (layout === "layout2") {
     cvPersonal = "box-sm-12 box-md-9 box-lg-7";
     cvMySelf = "box-sm-12";
-    cvSkill = "box-sm-6 box-md-4";
+    cvSkill = "box-sm-6 box-md-3";
     cvFramework = "box-sm-6 box-md-4";
     cvContact = "box-sm-12 box-md-4";
     cvEducation = "box-sm-9 box-md-3";
