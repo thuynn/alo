@@ -72,7 +72,6 @@ a {
 .cv-page {
   padding: 1.5rem;
   gap: 1.5rem;
-  max-width: 1920px;
 
   .cv-personal {
     background: #eaeaea;
@@ -212,10 +211,10 @@ a {
   }
 }
 .layout2 {
-  .cv-demo {
-    top: 1.5rem;
-  }
   @media #{$medium-up} {
+    .cv-demo {
+      top: 1.5rem;
+    }
     .cv-myself {
       display: flex;
       align-items: center;

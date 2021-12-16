@@ -85,7 +85,7 @@ const Education = () => {
     <div className="cv-box">
       <h5 className="cv-box-title">Education</h5>
       <div className="cv-box-content">
-        <div className="cv-title">National University of Ho Chi Minh City</div>
+        <div className="cv-title"><strong>National University of Ho Chi Minh City</strong></div>
       </div>
     </div>
   );
@@ -133,13 +133,13 @@ const Experience = () => {
           <li>2007 to 2014</li>
           <li>
             <strong>Product description:</strong> Develop and maintain an open-source product 
-            whichprovide collaboration and communication solutions for enterprises 
-            Develop and maintain an open-source product whichprovide collaboration 
+            which provide collaboration and communication solutions for enterprises 
+            Develop and maintain an open-source product which provide collaboration 
             and communication solutions for enterprises.
           </li>
           <li className="cv-title">Main responsibilities:</li>
           <li className="list-txt">Organize / Follow / Review the workload and the work of
-            the team on severals projects.</li>
+            the team on several projects.</li>
           <li className="list-txt">Develop and Contribute to resolve issues on all eXo Products
             and eXo Projects.</li>
           <li className="list-txt">Communication with others people such as TLs, PLs, etc.</li>
@@ -165,7 +165,6 @@ function App() {
   let cvEducation = "";
   let cvExperience = "";
   let cvDemo = "";
-  let cvEmpty = "";
 
   if (layout === "layout1") {
     cvPersonal = "box-sm-12 box-md-5 box-lg-3 box-h-5";
@@ -177,15 +176,14 @@ function App() {
     cvExperience = "box-sm-12 box-md-7";
     cvDemo = "box-sm-12";
   } else if (layout === "layout2") {
-    cvPersonal = "box-sm-9";
+    cvPersonal = "box-sm-12 box-md-9";
     cvMySelf = "box-sm-12";
     cvSkill = "box-sm-6 box-md-4";
     cvFramework = "box-sm-6 box-md-4";
     cvContact = "box-sm-12 box-md-4";
     cvEducation = "box-sm-9 box-md-3";
     cvExperience = "box-sm-9 box-md-6";
-    cvEmpty = "box-sm-3 box-h-2";
-    cvDemo = "box-sm-3";
+    cvDemo = "box-sm-12 box-md-3";
   }
   
   return (
@@ -220,7 +218,6 @@ function App() {
           </div>
         </div>
       </div>
-      <div className={"cv-empty " + cvEmpty}></div>
       <div className={"cv-education " + cvEducation}>
         <Education/>
       </div>
