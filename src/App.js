@@ -101,7 +101,7 @@ const Experience = () => {
             Spectos Asia - <a href="https://www.spectos.com/en/" target="_blank">www.spectos.com</a>
           </li>
           <li className="cv-title">
-            User Interface Web development
+            Senior User Interface Web development
           </li>
           <li>2014 to present</li>
           <li>
