@@ -13,18 +13,30 @@ $medium-only: "#{$screen} and (min-width: 640px) and (max-width: 1024px)" !defau
 
 $large-up: "#{$screen} and (min-width: 1440px)" !default;
 $large-only: "#{$screen} and (min-width: 1024px) and (max-width: 1420)px" !default;
+
+$red: #FB8261;
+$blue: #61DAFB;
+$green: #8DFB61;
+$orange: #CF61FB;
+
+@mixin single-transition($property:all, $speed:300ms, $ease:ease-out) {
+  transition: $property $speed $ease;
+}
+
+@mixin hover($color:#e1e7e9, $amount: 30) {
+  background-color: darken($color, $amount) ;
+}
+
 *,*:before,*:after {
   box-sizing: content-box;
 }
 html {
   font-size: 10px;
 }
-
 body {
   font-size: 1.4rem;
-  color: #2d2a2f;
+  color: #333;
 }
-
 ul {
   margin: 0;
   padding: 0;
@@ -33,6 +45,10 @@ ul {
 a {
   color: #5488c7;
 }
+button {
+  @include single-transition();
+  cursor: pointer;
+}
 .align-center {
   text-align: center;
 }
@@ -40,39 +56,128 @@ a {
 .align-left {
   text-align: left;
 }
-
 .align-right {
   text-align: right;
 }
-
 .italic {
   font-style: italic;
 }
-
 .uppercase {
   text-transform: uppercase;
 }
-
 .flex {
   display: flex;
 }
-
+.flex-1 {
+  flex: 1;
+}
 .align-items-center {
   align-items: center;
 }
-
 .justify-content-center {
   justify-content: center;
 }
-
 .txt-gray {
   color: #676769;
 }
-
+.show {
+  display: block!important;
+}
+.hide {
+  display: none!important;
+}
+.layout-hide {
+  filter: blur(3px)  grayscale(1);
+  -webkit-filter: blur(3px)  grayscale(1);
+}
+.light-box-frame {
+  background: rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; right: 0;bottom: 0; left: 0;
+  z-index: 100;
+  animation: lightBox 1s linear;
+  &.show {
+    display: flex!important;
+  }
+  .light-box {
+    background: white;
+    @media #{$small-only} {
+      width: 90vw;
+    }  
+    @media #{$medium-up} {
+      width: 50vw;
+    }
+    .light-box-form {
+      padding: 20px; 
+      .fa-handshake-o {
+        font-size: 8rem;
+        color: #666;
+      } 
+      .description {
+        font-size: 2rem;
+        font-weight: bold;
+        gap: 15px;
+        background: #fafafa;
+        padding: 20px;
+        margin: -20px -20px 20px;
+      }
+      .color-list {
+        gap: 20px;
+        margin: 15px 20px 20px;
+        button {
+          width: 20px; height: 20px;
+          border: none;
+          &:hover,&.btn-active {
+            transform: scale(1.5);
+          }
+          &.btn-active {
+            &::before {
+              content: "\f00c";
+              font:normal normal normal 14px/1 FontAwesome;
+              color: white;
+              display: inline-block;
+              vertical-align: baseline;
+            }
+          }
+          &.btn-red {
+            background: $red;
+          }
+          &.btn-green {
+            background: $green;
+          }
+          &.btn-blue {
+            background: $blue;
+          }
+          &.btn-orange {
+            background: $orange;
+          }
+        }
+      }
+      .btn-close {
+        background: #e1e7e9;
+        border: none;
+        line-height: 36px;
+        min-width: 100px;
+        text-align: center;
+        &:hover {
+          @include hover(#e1e7e9,30);
+        }
+      }
+    }
+  }
+}
+@keyframes lightBox {
+  0% {opacity: 0;}
+  50% {opacity: 0.8;}
+  100% {opacity: 1;}
+}
 .cv-page {
-  padding: 1.5rem;
-  gap: 1.5rem;
-
+  .cv-page-main {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
   .cv-personal {
     background: #eaeaea;
     padding: 1.5rem;
@@ -92,7 +197,6 @@ a {
     align-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-
     h4 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
@@ -100,23 +204,20 @@ a {
     }
     .btn-demo {
       background: none;
-      border: 2px solid darken($color: #61dafb, $amount: 30);
+      border: 2px solid;
       padding: 0.5rem;
       text-transform: uppercase;
       cursor: pointer;
-      transition: background-color 300ms ease-out;
+      
       &:hover {
-        background-color: darken($color: #61dafb, $amount: 30);
         color: white;
       }
       &.btn-active {
-        background: darken($color: #61dafb, $amount: 30);
         color: white;
       }
     }
   }
 }
-
 .cv-list {
   .cv-title {
     margin: 20px 0 0 0;
@@ -149,14 +250,12 @@ a {
     }
   }
 }
-
 .cv-box-title {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 18px;
   text-decoration: underline;
 }
-
 .cv-myself {
   .cv-avatar {
     max-width: 22rem;
@@ -177,7 +276,6 @@ a {
     line-height: 1.8rem;
   }
 }
-
 .cv-contact {
   .contact-list {
     margin: 0;
@@ -207,7 +305,6 @@ a {
     }
   }
 }
-
 .layout1 {
   @media #{$medium-up} {
     .cv-personal .cv-list {
@@ -234,9 +331,83 @@ a {
         flex: 1;
       }
     }
+  } 
+  .cv-experience + .cv-experience {
+    margin-top: 65px;
   }
 }
-
+.layout-red {
+  .text-custom-color {
+    color: $red;
+  }
+  .bg-custom-color {
+    background-color: $red;
+  }
+  .btn-custom-color {
+    border-color: $red;
+    &.btn-active {
+      @include hover($red,30);
+      border-color: darken($red, 30);
+      &:hover {
+        @include hover($red,30);
+      }
+    }
+  }
+}
+.layout-blue {
+  .text-custom-color {
+    color: $blue;
+  }
+  .bg-custom-color {
+    background-color: $blue;
+  }
+  .btn-custom-color {
+    border-color: $blue;
+    &.btn-active {
+      @include hover($blue,30);    
+      border-color: darken($blue, 30);
+      &:hover {
+        @include hover($blue,30);
+      }
+    }
+  }
+}
+.layout-green {
+  .text-custom-color {
+    color: $green;
+  }
+  .bg-custom-color {
+    background-color: $green;
+  }
+  .btn-custom-color {
+    border-color: $green;
+    &.btn-active {
+      @include hover($green,30);
+      border-color: darken($green, 30);
+      &:hover {
+        @include hover($green,30);
+      }
+    }
+  }
+}
+.layout-orange {
+  .text-custom-color {
+    color: $orange;
+  }
+  .bg-custom-color {
+    background-color: $orange;
+  }
+  .btn-custom-color {
+    border-color: $orange;
+    &.btn-active {
+      @include hover($orange,30);
+      border-color: darken($orange, 30);
+      &:hover {
+        @include hover($orange,30);
+      }
+    }
+  }
+}
 .cv-box-grid {
   $cols: 12;
   $rows: 10;
@@ -244,6 +415,9 @@ a {
   grid-template-columns: repeat($cols, 1fr);
  
   @media #{$small-up} {
+    .box-sm-empty {
+      display: none;
+    }
     @for $i from 1 through $cols {
       .box-sm-#{$i} {
         grid-column: span #{$i};
@@ -251,21 +425,25 @@ a {
     }
   }
   @media #{$medium-up} {
+    .box-md-empty {
+      display: none;
+    }
     @for $i from 1 through $cols {
       .box-md-#{$i} {
         grid-column: span #{$i};
       }
     }
   }
-
   @media #{$large-up} {
+    .box-lg-empty {
+      display: none;
+    }
     @for $i from 1 through $cols {
       .box-lg-#{$i} {
         grid-column: span #{$i};
       }
     }
   }
-
   @for $i from 1 through $rows {
     .box-h-#{$i} {
       grid-row: span #{$i};
