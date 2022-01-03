@@ -45,6 +45,9 @@ ul {
 a {
   color: #5488c7;
 }
+img {
+  max-width: 100%;
+}
 button {
   @include single-transition();
   cursor: pointer;
@@ -302,6 +305,11 @@ button {
         margin: 1rem 0 0;
       }
     }
+  }
+}
+.cv-screenshort {
+  .cv-box-grid {
+    gap: 1.5rem;
   }
 }
 .layout1 {

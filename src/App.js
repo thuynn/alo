@@ -162,6 +162,79 @@ const Experience2 = () => {
   );
 }
 
+const Screenshort = () => {
+  return (
+    <div className="cv-box">
+      <h5 className="cv-box-title text-custom-color">Portfolio</h5>
+      <div className="cv-box-content cv-box-grid">
+        <div className="box-sm-4">
+          <img src="https://lh3.googleusercontent.com/0DWgwop55L-7GRLDfEmpohCA7aVKqmN4YxGuZX388OQohGsTAwk8uxv2RctEFqwrD2y61tOq9YL22VaBpsrZHJO-74iwjlqleml5pzPgGQ=w890-h955-no"
+              alt="" />
+        </div>
+        <div className="box-sm-4">
+          <img src="https://lh3.googleusercontent.com/ClqlPFpoO3OaIvzg_OmCAABq-4_OwHcA2RoHJciLrpDjn1ZgTjX-XRr32-qG1EiYAIylKr0ycNBDWPRyA-_326Qoa2SVh2qaJ4eosCJLQg=w673-h955-no"
+              alt="" />
+        </div>
+        <div className="box-sm-4">
+          <img src="https://lh3.googleusercontent.com/ZVv3bEaKKUfVbnvEoQTXfooorSGi-iHj6QuDxPzt2W2vIodmWICAt1Chs3Gwob9PNXEhrO9RaJeOG8W4_yK7RqkQ-h15c5oxcbQtwn9woA=w899-h955-no"
+              alt="" />
+        </div>
+        <div className="box-sm-6">
+          <img src="https://lh3.googleusercontent.com/R7zcK9qaFLgpwdsNasNOY40Y-iGYYz95nHFPJEhBU-YOSQbTEAVAM_ranR64gseha515c-vzcXFBhVIi0qkuTw4qmx4hYQtvTDStFBa9uw=w1082-h479-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6 box-h-2">
+          <img src="https://lh3.googleusercontent.com/fQ4j4kRhDMlu7ZBnxyS73GlWZyUIHeoJPjgZIw6cervD6s-tE6Nt6msCOqPYgq5zIjXrHksS8nVKpbB9wFV7gnUuGiQnDiJzlcVKbGusGg=w609-h955-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6">
+          <img src="https://lh3.googleusercontent.com/cbXLrZsQnUyJTsojX8iLEtmslh_r2_SUqQJza093rGxf89Iv9RAXMxCMM-cQV76oyrjUK_o6HuoJGJg5YeSMb6QcxqejGCpDI2qrJ_8vTw=w943-h955-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6">
+          <img src="https://lh3.googleusercontent.com/uGrQAswf2tX9FC5AhKxoSjAnVfsstlzr6RIREPRXLmK4Dn6S20LJfdc7c6s4nIGqfpc7qJiMPLRhKYvNYQyuQnKWUb-xTBxj1cRaa8OTNA=w1349-h913-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6">
+          <img src="https://lh3.googleusercontent.com/-mY2ntts13eVwbV18rK3KeJMJMJ6MJ_LU13nrI9npHPDwfopBuYV4TqRsSqBRaQSidRFPi_uCXfyWWoK-skou1P4Yr5W_z9xo40uyyEAUg=w1349-h923-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6 box-h-2">
+          <img src="https://lh3.googleusercontent.com/MhqD7XLoWerGvHR0MWpCeZ-j_wPDQ7Pxw94Pw4t4rFDuTURrBWvH8NFzUE_1hPTTRxPxzAnfHOKt9EcS13lrAA3oh8AaZCDkc3pH4BmpSw=w558-h955-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6">
+          <img src="https://lh3.googleusercontent.com/5zjJb5gVZrQE1ReQcU5vrB4yFjQtsOqI61LZx0jUar8mNsRnGwmc7_5BC8y6D8U6H-h8xGsMY31Slt9aD8c7WVOgnCJI8LSjqd-IgUn3PA=w1349-h798-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6">
+          <img src="https://lh3.googleusercontent.com/FQ2SGRvqzcPNHkMvGUD6GLelDCN9k-vIO2DzrcNNwqQoFxlfGvPbv96EKS38gxnwtlwZpm51L0pQz2-oQJPzNaKw8OmiMjU3CAhQr575nQ=w1349-h919-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6">
+          <img src="https://lh3.googleusercontent.com/PHGd2FArTAfadT5ChMom_EiB10C1A9LMXTxPmJIHO9_mo-B_G_qcbBNkvTiW8E9x6OHHp3aqv1i2sNaQjii6x4yfBKeUhX_J2qW6SvoQ8A=w1349-h770-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-6">
+          <img src="https://lh3.googleusercontent.com/-8r0WOkHh21QGCJH5H17ja9wZe-50Cf-vQ6Vw_Snoo6CMGCNju-HevvBunpWTXfNmW3D0dBdcvMAKAJLWe9CyYmOUXtQHEd04hazxInA9A=w1349-h770-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-4">
+          <img src="https://lh3.googleusercontent.com/kfK4ZaYVPMxHOPFlBJtVpeKh0iiwdH0OFUs_GYGm9OU3OzPqW17DnclEG4R7hxpJBLSnLI4aS5E5i_-JA2WebHv2w54KzCivK8Knf1UZ5Q=w1232-h955-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-4">
+          <img src="https://lh3.googleusercontent.com/2CZXe-k7V8IDuZtwQ8X6SGAfryZLh_je_C9MhkZz-glD7bK6CHZ2tNCyCz5w_xCBkNV9LTu1Z-XZ0qD1YX63aR_pxJ6HetIfg3Vs-uItpg=w1232-h955-no" 
+              alt="" />
+        </div>
+        <div className="box-sm-4">
+          <img src="https://lh3.googleusercontent.com/kWK-uX1IoRD7zZOnT46Dt216JvgxW6uBJRjaGX4gz-xykd_Oi-XwBUWznUdEXTM2Acr5euN2fZTRJRa2tJBWKTP0c-tlKHWDenB-kiuH_g=w1232-h955-no" 
+              alt="" />
+        </div>
+      </div>
+    </div>
+  );
+}
 function App() {
   const [layout, setLayout] = useState("layout1");                // set layout column
   const [color, setColor] = useState("default");                  // set layout color
@@ -178,6 +251,7 @@ function App() {
   let cvExperience2 = "";
   let cvDemo = "";
   let cvEmpty = "";
+  let cvScreenshort = "";
 
   if (layout === "layout1") {
     cvPersonal = "box-sm-12 box-md-4 box-lg-3 box-h-5";
@@ -188,6 +262,7 @@ function App() {
     cvEducation = "box-sm-12 box-md-7 box-h-auto";
     cvExperience1 = "box-sm-12 box-md-8";
     cvExperience2 = "box-sm-12 box-md-8";
+    cvScreenshort = "box-sm-12";
     cvDemo = "box-sm-12";
     cvEmpty = "box-sm-empty";
   } else if (layout === "layout2") {
@@ -199,6 +274,7 @@ function App() {
     cvEducation = "box-sm-9";
     cvExperience1 = "box-sm-9 box-md-4";
     cvExperience2 = "box-sm-9 box-md-3";
+    cvScreenshort = "box-sm-9";
     cvDemo = "box-sm-12 box-md-3";
     cvEmpty = "box-md-3 box-h-3";
   }
@@ -296,6 +372,9 @@ function App() {
         </section>
         <section className={"cv-experience " + cvExperience2}>
           <Experience2/>
+        </section>
+        <section className={"cv-screenshort " + cvScreenshort}>
+          <Screenshort/>
         </section>
       </div>
     </div>
