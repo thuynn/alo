@@ -105,13 +105,13 @@ const Experience1 = () => {
           </li>
           <li>2014 to present</li>
           <li>
-            <strong>Product description:</strong> Feedbackstr is a real-time product to enable businesses to measure customer satisfaction through web and app-based surveys. Its data is collected via feedback or customer's data, analyzed, and visualized. 
-            <ul>
-              <li>- Using campaign module to manage, design surveys & feedbacks.</li>
-              <li>- Using customized cockpits and dashboards, managers can better understand their processes, monitor performance, and continuously improve their service quality.</li>
-              <li>- Using ticket module to manage and assign tasks to all employees</li>
-              <li>- Aggregates and analyzes into reports according to customer requirements.</li>
-            </ul>
+            <strong>Product description:</strong> 
+            Turn business intelligence into a business advantage! Customized cockpits display 
+            your business-relevant data and information in real time in easy-to-understand reports and graphics.
+            <p>
+              We help our customers collect data and create reports and analyst data with many types of period time. 
+              Based on that intelligent report, customers can see easily how to improve their weaknesses in business.
+            </p>
           </li>
           <li className="cv-title">
           Main responsibilities:
