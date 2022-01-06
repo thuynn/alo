@@ -45,6 +45,9 @@ ul {
 a {
   color: #5488c7;
 }
+iframe {
+  z-index: -1!important;
+}
 img {
   max-width: 100%;
 }
@@ -310,6 +313,14 @@ button {
 .cv-screenshort {
   .cv-box-grid {
     gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #eaeaea;
+    .cv-box {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top left;
+      min-height: 400px;
+    }
   }
 }
 .layout1 {
